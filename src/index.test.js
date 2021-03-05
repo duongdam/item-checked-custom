@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { ItemCheckedCustom } from ".";
 
-describe('ExampleComponent', () => {
-  it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+describe("ItemCheckedCustom", () => {
+  it("is truthy", () => {
+    expect(ItemCheckedCustom).toBeTruthy();
+  });
+});
