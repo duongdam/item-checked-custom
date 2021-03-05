@@ -3,6 +3,8 @@
 > Classfunc item checked custom used antd and styled component
 
 [![NPM](https://img.shields.io/npm/v/item-checked-custom.svg)](https://www.npmjs.com/package/item-checked-custom) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+##Demo
+https://duongdam.github.io/item-checked-custom/
 
 ## Install
 
