@@ -14,6 +14,7 @@ export const TickCustom = styled(TickSvg)`
 export const DivItems = styled.div(props => ({
   position: "relative",
   width: `${props.otherprops.width}`,
+  maxWidth: `${props.otherprops.maxWidth}`,
   height: `${props.otherprops.height}`,
   margin: `${props.otherprops.margin}`,
   padding: `${props.otherprops.padding}`,
@@ -43,7 +44,7 @@ export const DivBox = styled.div(props => ({
   borderRadius: "5px",
   width: "20px",
   height: "20px",
-  margin: "5px 10px",
+  margin: props.otherprops.iconMargin,
   backgroundColor: props.color,
   "& img": {
     position: "absolute",

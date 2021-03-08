@@ -5,6 +5,7 @@
 [![NPM](https://img.shields.io/npm/v/item-checked-custom.svg)](https://www.npmjs.com/package/item-checked-custom) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Demo
+
 https://duongdam.github.io/item-checked-custom/
 
 ## Install
@@ -42,7 +43,10 @@ const App = () => {
       <ItemCheckedCustom
         width={"250px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         margin={"10px"}
       />
 
@@ -52,7 +56,10 @@ const App = () => {
         border={"1px"}
         borderRadius={"10px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         margin={"10px"}
       />
 
@@ -62,7 +69,10 @@ const App = () => {
         border={"1px"}
         borderRadius={"10px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         margin={"10px"}
         isTextColor={true}
       />
@@ -72,10 +82,13 @@ const App = () => {
         name={"ClassFunc checked"}
         border={"1px"}
         borderRadius={"10px"}
-        color={'#690003'}
-        borderColor={'#690003'}
+        color={"#690003"}
+        borderColor={"#690003"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         margin={"10px"}
         isTextColor={true}
       />
@@ -85,7 +98,10 @@ const App = () => {
         border={"1px"}
         borderRadius={"10px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         margin={"10px"}
         isLeft={true}
         leftNumber={10}
@@ -96,7 +112,10 @@ const App = () => {
         border={"1px"}
         margin={"10px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         isRevert={true}
         isLeft={true}
         leftNumber={10}
@@ -107,9 +126,11 @@ const App = () => {
         border={"1px"}
         margin={"10px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         isRevert={true}
-        offTooltip={true}
         disabled={true}
       />
 
@@ -118,7 +139,10 @@ const App = () => {
         border={"1px"}
         margin={"10px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         isRevert={true}
         offTooltip={true}
         disabled={true}
@@ -130,6 +154,64 @@ const App = () => {
 
 export default App;
 
+```
+
+## Props type:
+
+```text
+  id: PropType.string,
+  width: PropType.string,
+  maxWidth: PropType.string,
+  height: PropType.string,
+  borderRadius: PropType.string,
+  name: PropType.string,
+  color: PropType.string,
+  borderColor: PropType.string,
+  border: PropType.string,
+  borderType: PropType.oneOf(["solid", "none", "dotted"]),
+  callBack: PropType.func,
+  isLeft: PropType.bool,
+  leftNumber: PropType.number,
+  checked: PropType.bool,
+  isRevert: PropType.bool,
+  disabled: PropType.bool,
+  hiddenAvatar: PropType.bool,
+  isTextColor: PropType.bool,
+  isBold: PropType.bool,
+  offTooltip: PropType.bool,
+  tooltipPlacement: PropType.string,
+  margin: PropType.string,
+  padding: PropType.string,
+  iconMargin: PropType.string
+```
+
+## Default props
+
+```text
+  id: uuidv4(),
+  width: "100%",
+  maxWidth: "350px",
+  height: "40px",
+  borderRadius: "0px",
+  name: "ClassFunc checked",
+  color: "#1790FF",
+  borderColor: "#1790FF",
+  border: null,
+  borderType: "solid",
+  callBack: null,
+  isLeft: false,
+  leftNumber: null,
+  checked: false,
+  isRevert: false,
+  disabled: false,
+  hiddenAvatar: false,
+  isTextColor: false,
+  isBold: false,
+  offTooltip: false,
+  tooltipPlacement: "top",
+  margin: "5px",
+  padding: "unset",
+  iconMargin: "0px 3px"
 ```
 
 ## License

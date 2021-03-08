@@ -22,7 +22,10 @@ const App = () => {
       <ItemCheckedCustom
         width={"250px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         margin={"10px"}
       />
 
@@ -32,7 +35,10 @@ const App = () => {
         border={"1px"}
         borderRadius={"10px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         margin={"10px"}
       />
 
@@ -42,7 +48,10 @@ const App = () => {
         border={"1px"}
         borderRadius={"10px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         margin={"10px"}
         isTextColor={true}
       />
@@ -52,10 +61,13 @@ const App = () => {
         name={"ClassFunc checked"}
         border={"1px"}
         borderRadius={"10px"}
-        color={'#690003'}
-        borderColor={'#690003'}
+        color={"#690003"}
+        borderColor={"#690003"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         margin={"10px"}
         isTextColor={true}
       />
@@ -65,7 +77,10 @@ const App = () => {
         border={"1px"}
         borderRadius={"10px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         margin={"10px"}
         isLeft={true}
         leftNumber={10}
@@ -76,7 +91,10 @@ const App = () => {
         border={"1px"}
         margin={"10px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         isRevert={true}
         isLeft={true}
         leftNumber={10}
@@ -87,9 +105,11 @@ const App = () => {
         border={"1px"}
         margin={"10px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         isRevert={true}
-        offTooltip={true}
         disabled={true}
       />
 
@@ -98,7 +118,10 @@ const App = () => {
         border={"1px"}
         margin={"10px"}
         checked={checked}
-        onClick={onClick}
+        callBack={(e) => {
+          if (e)
+            onClick();
+        }}
         isRevert={true}
         offTooltip={true}
         disabled={true}
