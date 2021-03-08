@@ -18,13 +18,13 @@ yarn add item-checked-custom
 
 ## Usage
 
-```jsx
+```js
 import React from "react";
 
 import { ItemCheckedCustom } from "item-checked-custom";
 
 const App = () => {
-  const [checked, setChecked] = React.useState(false);
+  const [checked, setChecked] = React.useState(true);
 
   const onClick = () => {
     setChecked(!checked);
@@ -43,11 +43,9 @@ const App = () => {
       <ItemCheckedCustom
         width={"250px"}
         checked={checked}
-        callBack={(e) => {
-          if (e)
-            onClick();
-        }}
+        onClick={onClick}
         margin={"10px"}
+        id={1}
       />
 
       With border radius
@@ -56,11 +54,9 @@ const App = () => {
         border={"1px"}
         borderRadius={"10px"}
         checked={checked}
-        callBack={(e) => {
-          if (e)
-            onClick();
-        }}
+        onClick={onClick}
         margin={"10px"}
+        id={2}
       />
 
       With border radius text color
@@ -69,12 +65,10 @@ const App = () => {
         border={"1px"}
         borderRadius={"10px"}
         checked={checked}
-        callBack={(e) => {
-          if (e)
-            onClick();
-        }}
+        onClick={onClick}
         margin={"10px"}
         isTextColor={true}
+        id={3}
       />
 
       With change color
@@ -85,12 +79,10 @@ const App = () => {
         color={"#690003"}
         borderColor={"#690003"}
         checked={checked}
-        callBack={(e) => {
-          if (e)
-            onClick();
-        }}
+        onClick={onClick}
         margin={"10px"}
         isTextColor={true}
+        id={4}
       />
 
       With left number
@@ -98,13 +90,11 @@ const App = () => {
         border={"1px"}
         borderRadius={"10px"}
         checked={checked}
-        callBack={(e) => {
-          if (e)
-            onClick();
-        }}
+        onClick={onClick}
         margin={"10px"}
         isLeft={true}
         leftNumber={10}
+        id={5}
       />
 
       Width revert
@@ -112,13 +102,11 @@ const App = () => {
         border={"1px"}
         margin={"10px"}
         checked={checked}
-        callBack={(e) => {
-          if (e)
-            onClick();
-        }}
+        onClick={onClick}
         isRevert={true}
         isLeft={true}
         leftNumber={10}
+        id={6}
       />
 
       Width disable
@@ -126,12 +114,10 @@ const App = () => {
         border={"1px"}
         margin={"10px"}
         checked={checked}
-        callBack={(e) => {
-          if (e)
-            onClick();
-        }}
+        onClick={onClick}
         isRevert={true}
         disabled={true}
+        id={7}
       />
 
       With off tooltip & disable
@@ -139,13 +125,11 @@ const App = () => {
         border={"1px"}
         margin={"10px"}
         checked={checked}
-        callBack={(e) => {
-          if (e)
-            onClick();
-        }}
+        onClick={onClick}
         isRevert={true}
         offTooltip={true}
         disabled={true}
+        id={8}
       />
     </div>
   );

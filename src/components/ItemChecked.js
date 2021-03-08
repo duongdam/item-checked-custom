@@ -1,6 +1,5 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
-import "antd/dist/antd.css";
 import {
   AvatarCustom, AvatarNoneCustom,
   DivBox,
@@ -10,17 +9,22 @@ import {
 } from "./common";
 import PropType from "prop-types";
 
-const ItemCheckedCustom = ({ ...rest }) => {
+const ItemCheckedCustom = ({
+                             onClick,
+                             disabled,
+                             ...rest
+                           }) => {
 
   const onClickAction = () => {
-    if (rest.disabled) {
+    if (disabled) {
       return;
     }
-    if (rest.callBack && typeof rest.callBack === "function") {
-      return rest.callBack("onClick");
+    if (onClick && typeof onClick === "function") {
+      return onClick();
     }
   };
 
+  console.log(rest.id);
   return (
     <DivItems id={rest.id} key={rest.id} otherprops={{
       width: rest.width,
@@ -39,6 +43,9 @@ const ItemCheckedCustom = ({ ...rest }) => {
         placement={rest.tooltipPlacement}
         arrowPointAtCenter
         getPopupContainer={() => document.getElementById(rest.id)}
+        otherprops={{
+          color: rest.color
+        }}
       >
         <DivNested
           otherprops={{ isRevert: rest.isRevert }}
@@ -82,7 +89,7 @@ ItemCheckedCustom.propTypes = {
   borderColor: PropType.string,
   border: PropType.string,
   borderType: PropType.oneOf(["solid", "none", "dotted"]),
-  callBack: PropType.func,
+  onClick: PropType.func,
   isLeft: PropType.bool,
   leftNumber: PropType.number,
   checked: PropType.bool,
@@ -109,7 +116,7 @@ ItemCheckedCustom.defaultProps = {
   borderColor: "#1790FF",
   border: null,
   borderType: "solid",
-  callBack: null,
+  onClick: null,
   isLeft: false,
   leftNumber: null,
   checked: false,

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Avatar, Tooltip } from "antd";
 import { ReactComponent as TickSvg } from "../tick.svg";
+import "antd/lib/avatar/style/css";
+import "antd/lib/tooltip/style/css";
 
 export const TickCustom = styled(TickSvg)`
   position: absolute;
@@ -120,5 +122,11 @@ export const AvatarNoneCustom = styled(Avatar)`
 `;
 
 export const TooltipCustom = styled(Tooltip)`
+  & .ant-tooltip-inner {
+    background-color: ${props => props.otherprops.color};
+  }
 
+  & .ant-tooltip-arrow-content {
+    background-color: ${props => props.otherprops.color};
+  }
 `;
