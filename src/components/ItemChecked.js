@@ -24,7 +24,6 @@ const ItemCheckedCustom = ({
     }
   };
 
-  console.log(rest.id);
   return (
     <DivItems id={rest.id} key={rest.id} otherprops={{
       width: rest.width,
