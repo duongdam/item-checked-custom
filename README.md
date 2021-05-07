@@ -4,6 +4,11 @@
 
 [![NPM](https://img.shields.io/npm/v/item-checked-custom.svg)](https://www.npmjs.com/package/item-checked-custom) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## New Release
+```angular2html
+  - fix warning id
+```
+
 ## Demo
 
 https://duongdam.github.io/item-checked-custom/
@@ -143,12 +148,12 @@ export default App;
 ## Props type:
 
 ```text
-  id: PropType.string,
+  id: PropType.oneOfType([PropType.string, PropType.number]),
   width: PropType.string,
   maxWidth: PropType.string,
   height: PropType.string,
   borderRadius: PropType.string,
-  name: PropType.string,
+  name: PropType.oneOfType([PropType.string, PropType.element, PropType.elementType]),
   color: PropType.string,
   borderColor: PropType.string,
   border: PropType.string,
