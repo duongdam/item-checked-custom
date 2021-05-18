@@ -78,12 +78,12 @@ const ItemCheckedCustom = ({
 };
 
 ItemCheckedCustom.propTypes = {
-  id: PropType.string,
+  id: PropType.oneOfType([PropType.string, PropType.number]),
   width: PropType.string,
   maxWidth: PropType.string,
   height: PropType.string,
   borderRadius: PropType.string,
-  name: PropType.string,
+  name: PropType.oneOfType([PropType.string, PropType.element, PropType.elementType]),
   color: PropType.string,
   borderColor: PropType.string,
   border: PropType.string,

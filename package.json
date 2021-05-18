@@ -1,6 +1,6 @@
 {
   "name": "item-checked-custom",
-  "version": "1.0.5",
+  "version": "1.1.2",
   "description": "ClassFunc item checked custom use antd and styled component",
   "author": "duongdam",
   "license": "MIT",
@@ -56,5 +56,12 @@
   "dependencies": {
     "antd": "^4.13.0",
     "styled-components": "^5.2.1"
-  }
+  },
+  "keywords": [
+    "antd",
+    "react item checked",
+    "styled component",
+    "classfunc library"
+  ],
+  "homepage": "https://github.com/duongdam"
 }
