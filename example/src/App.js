@@ -25,6 +25,7 @@ const App = () => {
         onClick={onClick}
         margin={"10px"}
         id={'1'}
+        hiddenAvatar={true}
       />
 
       With border radius

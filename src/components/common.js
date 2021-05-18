@@ -96,12 +96,16 @@ export const DivName = styled.div`
   margin: 0;
   flex: 1 1 auto;
   min-width: 0;
-  width: 80%;
+  width: ${props => props.isWidth ?
+    "calc(100% - 30px)" :
+    "calc(100% - 65px)"};
 
   & h1 {
-    display: flex;
-    justify-content: left;
-    margin-bottom: unset !important;
+    text-align: left;
+    margin: 0 3px;
+    //display: flex;
+    //justify-content: left;
+    //margin-bottom: unset !important;
   }
 `;
 

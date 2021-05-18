@@ -14,7 +14,7 @@ const ItemCheckedCustom = ({
                              disabled,
                              ...rest
                            }) => {
-
+  console.log(rest)
   const onClickAction = () => {
     if (disabled) {
       return;
@@ -58,7 +58,7 @@ const ItemCheckedCustom = ({
               <TickCustom alt="" />
             }
           </DivBox>
-          <DivName>
+          <DivName isWidth={rest.hiddenAvatar}>
             <TitleStyled isTextColor={rest.isTextColor} isBold={rest.isBold}
                          color={rest.color}>
               {rest.name}
