@@ -14,7 +14,6 @@ const ItemCheckedCustom = ({
                              disabled,
                              ...rest
                            }) => {
-  console.log(rest)
   const onClickAction = () => {
     if (disabled) {
       return;
