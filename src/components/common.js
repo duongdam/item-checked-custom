@@ -110,19 +110,33 @@ export const DivName = styled.div`
 `;
 
 export const AvatarCustom = styled(Avatar)`
-  width: 20px;
-  height: 20px;
-  font-size: 13px;
+  width: ${props => props.sizeLeft ? `${props.sizeLeft}px` : "28px"};
+  height: ${props => props.sizeLeft ? `${props.sizeLeft}px` : "28px"};
+  line-height: ${props => props.sizeLeft ? `${props.sizeLeft}px` : "28px"};
+  font-size: ${props => props.otherprops.fontSizeLeft ? `${props.otherprops.fontSizeLeft}px !important` : "11px !important"};
   margin-right: 10px;
   margin-left: ${props => props.otherprops.isRevert ? "10px" : ""};
+
+  & .ant-avatar-string {
+    transform: unset !important;
+    font-weight: bold;
+    position: static;
+  }
+
 `;
 
 export const AvatarNoneCustom = styled(Avatar)`
-  width: 20px;
-  height: 20px;
-  font-size: 13px;
+  width: ${props => props.sizeLeft ? `${props.sizeLeft}px` : "28px"};
+  height: ${props => props.sizeLeft ? `${props.sizeLeft}px` : "28px"};
+  line-height: ${props => props.sizeLeft ? `${props.sizeLeft}px` : "28px"};
+  font-size: ${props => props.otherprops.fontSizeLeft ? `${props.otherprops.fontSizeLeft}px !important` : "11px !important"};
   background: none !important;
   margin-right: 10px;
+
+  & .ant-avatar-string {
+    transform: unset !important;
+    font-weight: bold;
+  }
 `;
 
 export const TooltipCustom = styled(Tooltip)`

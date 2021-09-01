@@ -1,10 +1,14 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import {
-  AvatarCustom, AvatarNoneCustom,
+  AvatarCustom,
+  AvatarNoneCustom,
   DivBox,
-  DivItems, DivName,
-  DivNested, TickCustom, TitleStyled,
+  DivItems,
+  DivName,
+  DivNested,
+  TickCustom,
+  TitleStyled,
   TooltipCustom
 } from "./common";
 import PropType from "prop-types";
@@ -14,12 +18,12 @@ const ItemCheckedCustom = ({
                              disabled,
                              ...rest
                            }) => {
-  const onClickAction = () => {
+  const onClickAction = (event) => {
     if (disabled) {
       return;
     }
     if (onClick && typeof onClick === "function") {
-      return onClick();
+      return onClick(event);
     }
   };
 
@@ -44,6 +48,7 @@ const ItemCheckedCustom = ({
         otherprops={{
           color: rest.color
         }}
+        destroyTooltipOnHide={{ keepParent: false }}
       >
         <DivNested
           otherprops={{ isRevert: rest.isRevert }}
@@ -66,9 +71,11 @@ const ItemCheckedCustom = ({
           {
             rest.hiddenAvatar ? null :
               rest.isLeft ?
-                <AvatarCustom size={20}
-                              otherprops={{ isRevert: rest.isRevert }}> {rest.leftNumber}</AvatarCustom>
-                : <AvatarNoneCustom size={20} />
+                <AvatarCustom size={rest.sizeLeft} otherprops={{
+                  isRevert: rest.isRevert,
+                  fontSizeLeft: rest.fontSizeLeft
+                }}> {rest.leftNumber}</AvatarCustom>
+                : <AvatarNoneCustom size={rest.sizeLeft} otherprops={{ fontSizeLeft: rest.fontSizeLeft }} />
           }
         </DivNested>
       </TooltipCustom>
@@ -100,7 +107,9 @@ ItemCheckedCustom.propTypes = {
   tooltipPlacement: PropType.string,
   margin: PropType.string,
   padding: PropType.string,
-  iconMargin: PropType.string
+  iconMargin: PropType.string,
+  sizeLeft: PropType.number,
+  fontSizeLeft: PropType.string
 };
 
 ItemCheckedCustom.defaultProps = {
@@ -127,7 +136,9 @@ ItemCheckedCustom.defaultProps = {
   tooltipPlacement: "top",
   margin: "5px",
   padding: "unset",
-  iconMargin: "0px 3px"
+  iconMargin: "0px 3px",
+  sizeLeft: 28,
+  fontSizeLeft: 11
 };
 
 export default ItemCheckedCustom;

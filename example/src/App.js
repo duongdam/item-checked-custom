@@ -24,7 +24,7 @@ const App = () => {
         checked={checked}
         onClick={onClick}
         margin={"10px"}
-        id={'1'}
+        id={"1"}
         hiddenAvatar={true}
       />
 
@@ -36,7 +36,7 @@ const App = () => {
         checked={checked}
         onClick={onClick}
         margin={"10px"}
-        id={'2'}
+        id={"2"}
       />
 
       With border radius text color
@@ -48,7 +48,7 @@ const App = () => {
         onClick={onClick}
         margin={"10px"}
         isTextColor={true}
-        id={'3'}
+        id={"3"}
       />
 
       With change color
@@ -62,7 +62,7 @@ const App = () => {
         onClick={onClick}
         margin={"10px"}
         isTextColor={true}
-        id={'4'}
+        id={"4"}
       />
 
       With left number
@@ -74,7 +74,31 @@ const App = () => {
         margin={"10px"}
         isLeft={true}
         leftNumber={10}
-        id={'5'}
+        id={"5"}
+      />
+
+      With left number
+      <ItemCheckedCustom
+        border={"1px"}
+        borderRadius={"10px"}
+        checked={checked}
+        onClick={onClick}
+        margin={"10px"}
+        isLeft={true}
+        leftNumber={2}
+        id={"5"}
+      />
+
+      With left number
+      <ItemCheckedCustom
+        border={"1px"}
+        borderRadius={"10px"}
+        checked={checked}
+        onClick={onClick}
+        margin={"10px"}
+        isLeft={true}
+        leftNumber={300}
+        id={"5"}
       />
 
       Width revert
@@ -86,7 +110,7 @@ const App = () => {
         isRevert={true}
         isLeft={true}
         leftNumber={10}
-        id={'6'}
+        id={"6"}
       />
 
       Width disable
@@ -97,7 +121,7 @@ const App = () => {
         onClick={onClick}
         isRevert={true}
         disabled={true}
-        id={'7'}
+        id={"7"}
       />
 
       With off tooltip & disable
