@@ -109,7 +109,7 @@ ItemCheckedCustom.propTypes = {
   padding: PropType.string,
   iconMargin: PropType.string,
   sizeLeft: PropType.number,
-  fontSizeLeft: PropType.string
+  fontSizeLeft: PropType.number
 };
 
 ItemCheckedCustom.defaultProps = {
