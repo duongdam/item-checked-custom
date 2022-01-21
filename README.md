@@ -4,9 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/v/item-checked-custom.svg)](https://www.npmjs.com/package/item-checked-custom) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## New Release v1.1.6
+## New Release v1.1.8
 
 ```angular2html
+- off hover change color
 - fix number left size
 - add props tooltips destroyTooltipOnHide={{ keepParent: false }}, reducer DOM element
 - fix warning id

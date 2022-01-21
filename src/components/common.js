@@ -23,7 +23,7 @@ export const DivItems = styled.div(props => ({
   borderRadius: `${props.otherprops.borderRadius}`,
   border: `${props.otherprops.border} ${props.otherprops.borderType} ${props.otherprops.borderColor}`,
   "&:hover": {
-    background: "#F1F1F1",
+    background: `${props.otherprops.hoverChangeColor ? "#F1F1F1" : "unset"}`,
     cursor: "pointer"
   },
   "&:hover span": {

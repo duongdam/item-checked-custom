@@ -26,6 +26,8 @@ const App = () => {
         margin={"10px"}
         id={"1"}
         hiddenAvatar={true}
+        color={"red"}
+        hoverChangeColor={false}
       />
 
       With border radius

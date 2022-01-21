@@ -38,7 +38,8 @@ const ItemCheckedCustom = ({
       borderType: rest.borderType,
       margin: rest.margin,
       padding: rest.padding,
-      maxWidth: rest.maxWidth
+      maxWidth: rest.maxWidth,
+      hoverChangeColor: rest.hoverChangeColor
     }} {...rest}>
       <TooltipCustom
         title={rest.offTooltip ? null : rest.name}
@@ -109,7 +110,8 @@ ItemCheckedCustom.propTypes = {
   padding: PropType.string,
   iconMargin: PropType.string,
   sizeLeft: PropType.number,
-  fontSizeLeft: PropType.number
+  fontSizeLeft: PropType.number,
+  hoverChangeColor: PropType.bool
 };
 
 ItemCheckedCustom.defaultProps = {
@@ -138,7 +140,8 @@ ItemCheckedCustom.defaultProps = {
   padding: "unset",
   iconMargin: "0px 3px",
   sizeLeft: 28,
-  fontSizeLeft: 11
+  fontSizeLeft: 11,
+  hoverChangeColor: true
 };
 
 export default ItemCheckedCustom;
